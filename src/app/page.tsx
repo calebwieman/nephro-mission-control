@@ -1,10 +1,12 @@
+'use client'
+
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import { useState } from "react";
 
-'use client';\n\nexport default function Home() {
+export default function Home() {
   const actions = useQuery(api.actions.list) || [];
   const tasks = useQuery(api.tasks.list) || [];
   const [searchQuery, setSearchQuery] = useState("");
