@@ -4,7 +4,7 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import { useState } from "react";
 
-export default function Home() {
+'use client';\n\nexport default function Home() {
   const actions = useQuery(api.actions.list) || [];
   const tasks = useQuery(api.tasks.list) || [];
   const [searchQuery, setSearchQuery] = useState("");
